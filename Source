@@ -1,0 +1,283 @@
+loadstring(game:HttpGet('https://pastebin.com/raw/cwDSpepQ', true))()
+local first = library:AddWindow("Bomb Simulator Made By emxl#8163")
+local first_tab = first:AddTab('Farming')
+local Second_tab = first:AddTab('Extra stuff')
+local RESULT = nil
+local AutoDmg = false
+local Distance = 100
+
+first_tab:AddButton('Auto Farm Area 1', function()
+    local region = 1
+local bombs = workspace.Resources.Regions[region].SpawnedBombs:GetChildren()
+local root = game.Players.LocalPlayer.Character.HumanoidRootPart
+table.sort(bombs,function(a,b)
+    return (a.Ring.Position-root.Position).magnitude - tonumber(a.Name)*1e6 < (b.Ring.Position-root.Position).magnitude - tonumber(b.Name)*1e6
+end)
+for _,bomb in ipairs(bombs) do
+    local vispart
+    for _,v in ipairs(bomb:GetDescendants()) do
+        if v:IsA("BasePart") and v.Transparency < 0.1 then
+            vispart = v
+            break
+        end
+    end
+    if vispart then
+        root.CFrame = root.CFrame-root.CFrame.p+bomb.Ring.Position+Vector3.new(0,3,0)
+        wait(0.2)
+        local e = 0
+        while e < region*15 and bomb.Parent and vispart.Parent and vispart.Transparency < 0.1 do
+            for i=1,100 do
+                spawn(function()game:GetService("ReplicatedStorage").Events.Server.BombAttack:InvokeServer(workspace.Resources.Regions[region], bomb)end)
+            end
+            e=e+wait()
+        end
+        wait(0.2)
+        for _,pickup in ipairs(workspace.Resources.Pickups:GetChildren()) do
+            game:GetService("ReplicatedStorage").Events.Client.BombReward:FireServer(pickup)
+        end
+    end
+end
+end)
+
+first_tab:AddButton('Auto Farm Area 2', function()
+    local region = 2
+local bombs = workspace.Resources.Regions[region].SpawnedBombs:GetChildren()
+local root = game.Players.LocalPlayer.Character.HumanoidRootPart
+table.sort(bombs,function(a,b)
+    return (a.Ring.Position-root.Position).magnitude - tonumber(a.Name)*1e6 < (b.Ring.Position-root.Position).magnitude - tonumber(b.Name)*1e6
+end)
+for _,bomb in ipairs(bombs) do
+    local vispart
+    for _,v in ipairs(bomb:GetDescendants()) do
+        if v:IsA("BasePart") and v.Transparency < 0.1 then
+            vispart = v
+            break
+        end
+    end
+    if vispart then
+        root.CFrame = root.CFrame-root.CFrame.p+bomb.Ring.Position+Vector3.new(0,3,0)
+        wait(0.2)
+        local e = 0
+        while e < region*15 and bomb.Parent and vispart.Parent and vispart.Transparency < 0.1 do
+            for i=1,100 do
+                spawn(function()game:GetService("ReplicatedStorage").Events.Server.BombAttack:InvokeServer(workspace.Resources.Regions[region], bomb)end)
+            end
+            e=e+wait()
+        end
+        wait(0.2)
+        for _,pickup in ipairs(workspace.Resources.Pickups:GetChildren()) do
+            game:GetService("ReplicatedStorage").Events.Client.BombReward:FireServer(pickup)
+        end
+    end
+end
+end)
+
+first_tab:AddButton('Auto Farm Area 3', function()
+    local region = 3
+local bombs = workspace.Resources.Regions[region].SpawnedBombs:GetChildren()
+local root = game.Players.LocalPlayer.Character.HumanoidRootPart
+table.sort(bombs,function(a,b)
+    return (a.Ring.Position-root.Position).magnitude - tonumber(a.Name)*1e6 < (b.Ring.Position-root.Position).magnitude - tonumber(b.Name)*1e6
+end)
+for _,bomb in ipairs(bombs) do
+    local vispart
+    for _,v in ipairs(bomb:GetDescendants()) do
+        if v:IsA("BasePart") and v.Transparency < 0.1 then
+            vispart = v
+            break
+        end
+    end
+    if vispart then
+        root.CFrame = root.CFrame-root.CFrame.p+bomb.Ring.Position+Vector3.new(0,3,0)
+        wait(0.2)
+        local e = 0
+        while e < region*15 and bomb.Parent and vispart.Parent and vispart.Transparency < 0.1 do
+            for i=1,100 do
+                spawn(function()game:GetService("ReplicatedStorage").Events.Server.BombAttack:InvokeServer(workspace.Resources.Regions[region], bomb)end)
+            end
+            e=e+wait()
+        end
+        wait(0.2)
+        for _,pickup in ipairs(workspace.Resources.Pickups:GetChildren()) do
+            game:GetService("ReplicatedStorage").Events.Client.BombReward:FireServer(pickup)
+        end
+    end
+end
+end)
+
+first_tab:AddButton('Auto Farm Area 4', function()
+    local region = 4
+local bombs = workspace.Resources.Regions[region].SpawnedBombs:GetChildren()
+local root = game.Players.LocalPlayer.Character.HumanoidRootPart
+table.sort(bombs,function(a,b)
+    return (a.Ring.Position-root.Position).magnitude - tonumber(a.Name)*1e6 < (b.Ring.Position-root.Position).magnitude - tonumber(b.Name)*1e6
+end)
+for _,bomb in ipairs(bombs) do
+    local vispart
+    for _,v in ipairs(bomb:GetDescendants()) do
+        if v:IsA("BasePart") and v.Transparency < 0.1 then
+            vispart = v
+            break
+        end
+    end
+    if vispart then
+        root.CFrame = root.CFrame-root.CFrame.p+bomb.Ring.Position+Vector3.new(0,3,0)
+        wait(0.2)
+        local e = 0
+        while e < region*15 and bomb.Parent and vispart.Parent and vispart.Transparency < 0.1 do
+            for i=1,100 do
+                spawn(function()game:GetService("ReplicatedStorage").Events.Server.BombAttack:InvokeServer(workspace.Resources.Regions[region], bomb)end)
+            end
+            e=e+wait()
+        end
+        wait(0.2)
+        for _,pickup in ipairs(workspace.Resources.Pickups:GetChildren()) do
+            game:GetService("ReplicatedStorage").Events.Client.BombReward:FireServer(pickup)
+        end
+    end
+end
+end)
+
+first_tab:AddButton('Auto Farm Area 5', function()
+    local region = 5
+local bombs = workspace.Resources.Regions[region].SpawnedBombs:GetChildren()
+local root = game.Players.LocalPlayer.Character.HumanoidRootPart
+table.sort(bombs,function(a,b)
+    return (a.Ring.Position-root.Position).magnitude - tonumber(a.Name)*1e6 < (b.Ring.Position-root.Position).magnitude - tonumber(b.Name)*1e6
+end)
+for _,bomb in ipairs(bombs) do
+    local vispart
+    for _,v in ipairs(bomb:GetDescendants()) do
+        if v:IsA("BasePart") and v.Transparency < 0.1 then
+            vispart = v
+            break
+        end
+    end
+    if vispart then
+        root.CFrame = root.CFrame-root.CFrame.p+bomb.Ring.Position+Vector3.new(0,3,0)
+        wait(0.2)
+        local e = 0
+        while e < region*15 and bomb.Parent and vispart.Parent and vispart.Transparency < 0.1 do
+            for i=1,100 do
+                spawn(function()game:GetService("ReplicatedStorage").Events.Server.BombAttack:InvokeServer(workspace.Resources.Regions[region], bomb)end)
+            end
+            e=e+wait()
+        end
+        wait(0.2)
+        for _,pickup in ipairs(workspace.Resources.Pickups:GetChildren()) do
+            game:GetService("ReplicatedStorage").Events.Client.BombReward:FireServer(pickup)
+        end
+    end
+end
+end)
+
+first_tab:AddButton('Auto Farm Area 6', function()
+    local region = 6
+local bombs = workspace.Resources.Regions[region].SpawnedBombs:GetChildren()
+local root = game.Players.LocalPlayer.Character.HumanoidRootPart
+table.sort(bombs,function(a,b)
+    return (a.Ring.Position-root.Position).magnitude - tonumber(a.Name)*1e6 < (b.Ring.Position-root.Position).magnitude - tonumber(b.Name)*1e6
+end)
+for _,bomb in ipairs(bombs) do
+    local vispart
+    for _,v in ipairs(bomb:GetDescendants()) do
+        if v:IsA("BasePart") and v.Transparency < 0.1 then
+            vispart = v
+            break
+        end
+    end
+    if vispart then
+        root.CFrame = root.CFrame-root.CFrame.p+bomb.Ring.Position+Vector3.new(0,3,0)
+        wait(0.2)
+        local e = 0
+        while e < region*15 and bomb.Parent and vispart.Parent and vispart.Transparency < 0.1 do
+            for i=1,100 do
+                spawn(function()game:GetService("ReplicatedStorage").Events.Server.BombAttack:InvokeServer(workspace.Resources.Regions[region], bomb)end)
+            end
+            e=e+wait()
+        end
+        wait(0.2)
+        for _,pickup in ipairs(workspace.Resources.Pickups:GetChildren()) do
+            game:GetService("ReplicatedStorage").Events.Client.BombReward:FireServer(pickup)
+        end
+    end
+end
+end)
+
+first_tab:AddButton('Auto Farm Area 7', function()
+    local region = 7
+local bombs = workspace.Resources.Regions[region].SpawnedBombs:GetChildren()
+local root = game.Players.LocalPlayer.Character.HumanoidRootPart
+table.sort(bombs,function(a,b)
+    return (a.Ring.Position-root.Position).magnitude - tonumber(a.Name)*1e6 < (b.Ring.Position-root.Position).magnitude - tonumber(b.Name)*1e6
+end)
+for _,bomb in ipairs(bombs) do
+    local vispart
+    for _,v in ipairs(bomb:GetDescendants()) do
+        if v:IsA("BasePart") and v.Transparency < 0.1 then
+            vispart = v
+            break
+        end
+    end
+    if vispart then
+        root.CFrame = root.CFrame-root.CFrame.p+bomb.Ring.Position+Vector3.new(0,3,0)
+        wait(0.2)
+        local e = 0
+        while e < region*15 and bomb.Parent and vispart.Parent and vispart.Transparency < 0.1 do
+            for i=1,100 do
+                spawn(function()game:GetService("ReplicatedStorage").Events.Server.BombAttack:InvokeServer(workspace.Resources.Regions[region], bomb)end)
+            end
+            e=e+wait()
+        end
+        wait(0.2)
+        for _,pickup in ipairs(workspace.Resources.Pickups:GetChildren()) do
+            game:GetService("ReplicatedStorage").Events.Client.BombReward:FireServer(pickup)
+        end
+    end
+end
+end)
+
+first_tab:AddButton('Auto Farm Area 8', function()
+    local region = 8
+local bombs = workspace.Resources.Regions[region].SpawnedBombs:GetChildren()
+local root = game.Players.LocalPlayer.Character.HumanoidRootPart
+table.sort(bombs,function(a,b)
+    return (a.Ring.Position-root.Position).magnitude - tonumber(a.Name)*1e6 < (b.Ring.Position-root.Position).magnitude - tonumber(b.Name)*1e6
+end)
+for _,bomb in ipairs(bombs) do
+    local vispart
+    for _,v in ipairs(bomb:GetDescendants()) do
+        if v:IsA("BasePart") and v.Transparency < 0.1 then
+            vispart = v
+            break
+        end
+    end
+    if vispart then
+        root.CFrame = root.CFrame-root.CFrame.p+bomb.Ring.Position+Vector3.new(0,3,0)
+        wait(0.2)
+        local e = 0
+        while e < region*15 and bomb.Parent and vispart.Parent and vispart.Transparency < 0.1 do
+            for i=1,100 do
+                spawn(function()game:GetService("ReplicatedStorage").Events.Server.BombAttack:InvokeServer(workspace.Resources.Regions[region], bomb)end)
+            end
+            e=e+wait()
+        end
+        wait(0.2)
+        for _,pickup in ipairs(workspace.Resources.Pickups:GetChildren()) do
+            game:GetService("ReplicatedStorage").Events.Client.BombReward:FireServer(pickup)
+        end
+    end
+end
+end)
+
+Second_tab:AddSwitch("Auto Damage",function()
+    AutoDmg = (not AutoDmg);
+end)
+    
+while wait(.001) do
+    if AutoDmg == true then
+game:GetService("ReplicatedStorage").Events.Server.RequestQuestClaim:InvokeServer("Deal Damage")
+    else
+        RESULT = nil
+    end
+end
