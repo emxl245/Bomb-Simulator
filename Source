@@ -4,7 +4,6 @@ local first_tab = first:AddTab('Farming')
 local Second_tab = first:AddTab('Extra stuff')
 local RESULT = nil
 local AutoDmg = false
-local Distance = 100
 
 first_tab:AddButton('Auto Farm Area 1', function()
     local region = 1
